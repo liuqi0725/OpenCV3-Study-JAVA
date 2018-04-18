@@ -9,7 +9,7 @@ import org.opencv.imgproc.Imgproc;
 /**
  * @Author : alexliu
  * @Description : 主要学习<br/>
- * 1. 3种线性滤波<br/>
+ * 1. 3种线性滤波 <br/>
  * 2. 2种非线性滤波<br/>
  */
 public class StudyTest_7 extends OpenCVStudyBase{
