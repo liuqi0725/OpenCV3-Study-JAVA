@@ -41,7 +41,7 @@ public class StudyTest_4 extends OpenCVStudyBase{
      * 对角度的理解可以参考 （https://blog.csdn.net/gxiaob/article/details/9396955）
      */
     @Test
-    public void drawLine() {
+    public void drawEllipse() {
 
         Mat sourceImage = new Mat(500,500,CvType.CV_8UC3,Scalar.all(255));
 
