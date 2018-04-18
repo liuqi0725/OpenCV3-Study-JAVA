@@ -9,7 +9,7 @@ import org.opencv.imgproc.Imgproc;
 /**
  * @Author : alexliu
  * @Description : 主要学习<br/>
- * 1. resize 图像缩放<br/>
+ * 1. resize 图像缩放 <br/>
  * 2. rect 矩形对象<br/>
  * 3. cvtColor 颜色空间转化转换<br/>
  */
