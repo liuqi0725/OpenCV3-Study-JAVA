@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @Author : alexliu
  * @Description : 主要学习<br/>
- * 1. 图像线性混合addWeighted<br/>
+ * 1. 图像线性混合addWeighted <br/>
  * 2. 图像通道的拆分、合并<br/>
  * 3. 离散傅里叶变换 DFT<br/>
  */
