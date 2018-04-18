@@ -7,7 +7,7 @@ import org.opencv.core.*;
 /**
  * @Author : alexliu
  * @Description : 主要学习<br/>
- * 1. 创建 Mat 对象，Mat 对象的参数介绍<br/>
+ * 1. 创建 Mat 对象，Mat 对象的参数介绍 <br/>
  * 2. 通过Matlab 创建 Mat 对象<br/>
  * 3. 创建彩色图像<br/>
  * 4. 创建透明图像<br/>
