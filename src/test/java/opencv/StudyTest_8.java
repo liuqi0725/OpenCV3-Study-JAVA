@@ -19,7 +19,7 @@ import org.opencv.imgproc.Imgproc;
 public class StudyTest_8 extends OpenCVStudyBase{
 
 
-    private String save_dest_dir = "study-output/study-opencv-8";
+    private String save_dir = "study-output/study-opencv-8";
 
     /**
      * 图像腐蚀处理（可以理解为像素化）
@@ -35,7 +35,7 @@ public class StudyTest_8 extends OpenCVStudyBase{
         Mat outImage = new Mat();
         //开始腐蚀
         Imgproc.erode(sourceImage,outImage,structImage);
-        this.saveImage(this.save_dest_dir + "/image_process_erode_1.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_erode_1.png",outImage);
 
 
     }
@@ -57,7 +57,7 @@ public class StudyTest_8 extends OpenCVStudyBase{
         Mat structImage = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(5,5));
         Imgproc.erode(binaryMat, outImage, structImage);
 
-        this.saveImage(this.save_dest_dir + "/image_process_erode_2.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_erode_2.png",outImage);
 
     }
 
@@ -74,7 +74,7 @@ public class StudyTest_8 extends OpenCVStudyBase{
         //模糊图像，size 单位越大 模糊效果越好
         Imgproc.blur(sourceImage,outImage,new Size(5,10));
 
-        this.saveImage(this.save_dest_dir + "/image_process_normal_blur.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_normal_blur.png",outImage);
 
     }
 
@@ -93,7 +93,7 @@ public class StudyTest_8 extends OpenCVStudyBase{
 
         Imgproc.GaussianBlur(sourceImage,outImage,new Size(3,3),0);
 
-        this.saveImage(this.save_dest_dir + "/image_process_gaussian_blur.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_gaussian_blur.png",outImage);
 
     }
 
@@ -121,7 +121,7 @@ public class StudyTest_8 extends OpenCVStudyBase{
         // 20，60 2个参数 符合 1：3   1：2 即可
         Imgproc.Canny(outImage,outImage, 20 ,60);
 
-        this.saveImage(this.save_dest_dir + "/image_process_canny.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_canny.png",outImage);
 
     }
 

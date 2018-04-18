@@ -60,7 +60,7 @@ public class StudyTest_7 extends OpenCVStudyBase{
      */
 
 
-    private String save_dest_dir = "study-output/study-opencv-7";
+    private String save_dir = "study-output/study-opencv-7";
 
     /**
      * 方框滤波
@@ -88,14 +88,16 @@ public class StudyTest_7 extends OpenCVStudyBase{
 
         Imgproc.boxFilter(src,dst,-1,new Size(3,3));
 
-        //求和
+        /*
+         * 求和    可参考 https://blog.csdn.net/dcrmg/article/details/52589749
+         */
         Mat sum = new Mat();
         Imgproc.integral(dst,sum);
 
         Core.normalize(sum,sum,0,255,Core.NORM_MINMAX);
 
-        this.saveImage(this.save_dest_dir + "/image_process_boxFilter.png",dst);
-        this.saveImage(this.save_dest_dir + "/image_process_boxFilter_sum.png",sum);
+        this.saveImage(this.save_dir + "/image_process_boxFilter.png",dst);
+        this.saveImage(this.save_dir + "/image_process_boxFilter_sum.png",sum);
     }
 
     /**
@@ -129,14 +131,16 @@ public class StudyTest_7 extends OpenCVStudyBase{
 
         Imgproc.blur(src,dst,new Size(7,7));
 
-        //求和
+        /*
+         * 求和    可参考 https://blog.csdn.net/dcrmg/article/details/52589749
+         */
         Mat sum = new Mat();
         Imgproc.integral(dst,sum);
 
         Core.normalize(sum,sum,0,255,Core.NORM_MINMAX);
 
-        this.saveImage(this.save_dest_dir + "/image_process_blur.png",dst);
-        this.saveImage(this.save_dest_dir + "/image_process_blur_sum.png",sum);
+        this.saveImage(this.save_dir + "/image_process_blur.png",dst);
+        this.saveImage(this.save_dir + "/image_process_blur_sum.png",sum);
 
     }
 
@@ -171,14 +175,16 @@ public class StudyTest_7 extends OpenCVStudyBase{
 
         Imgproc.GaussianBlur(src,dst,new Size(3,5),0,0);
 
-        //求和
+        /*
+         * 求和    可参考 https://blog.csdn.net/dcrmg/article/details/52589749
+         */
         Mat sum = new Mat();
         Imgproc.integral(dst,sum);
 
         Core.normalize(sum,sum,0,255,Core.NORM_MINMAX);
 
-        this.saveImage(this.save_dest_dir + "/image_process_gaussianBlur.png",dst);
-        this.saveImage(this.save_dest_dir + "/image_process_gaussianBlur_sum.png",sum);
+        this.saveImage(this.save_dir + "/image_process_gaussianBlur.png",dst);
+        this.saveImage(this.save_dir + "/image_process_gaussianBlur_sum.png",sum);
     }
 
     /**
@@ -206,14 +212,16 @@ public class StudyTest_7 extends OpenCVStudyBase{
 
         Imgproc.medianBlur(src,dst,3);
 
-        //求和
+        /*
+         * 求和    可参考 https://blog.csdn.net/dcrmg/article/details/52589749
+         */
         Mat sum = new Mat();
         Imgproc.integral(dst,sum);
 
         Core.normalize(sum,sum,0,255,Core.NORM_MINMAX);
 
-        this.saveImage(this.save_dest_dir + "/image_process_medianFilter.png",dst);
-        this.saveImage(this.save_dest_dir + "/image_process_medianFilter_sum.png",sum);
+        this.saveImage(this.save_dir + "/image_process_medianFilter.png",dst);
+        this.saveImage(this.save_dir + "/image_process_medianFilter_sum.png",sum);
     }
 
     /**
@@ -244,14 +252,16 @@ public class StudyTest_7 extends OpenCVStudyBase{
 
         Imgproc.bilateralFilter(src,dst,20,20*2,20/2);
 
-        //求和
+        /*
+         * 求和    可参考 https://blog.csdn.net/dcrmg/article/details/52589749
+         */
         Mat sum = new Mat();
         Imgproc.integral(dst,sum);
 
         Core.normalize(sum,sum,0,255,Core.NORM_MINMAX);
 
-        this.saveImage(this.save_dest_dir + "/image_process_bilateralFilter.png",dst);
-        this.saveImage(this.save_dest_dir + "/image_process_bilateralFilter_sum.png",sum);
+        this.saveImage(this.save_dir + "/image_process_bilateralFilter.png",dst);
+        this.saveImage(this.save_dir + "/image_process_bilateralFilter_sum.png",sum);
     }
 
 }

@@ -12,7 +12,7 @@ import org.opencv.imgcodecs.Imgcodecs;
  */
 public class StudyTest_5 extends OpenCVStudyBase{
 
-    private String save_dest_dir = "study-output/study-opencv-5";
+    private String save_dir = "study-output/study-opencv-5";
 
     /**
      * 图像空间压缩
@@ -23,7 +23,7 @@ public class StudyTest_5 extends OpenCVStudyBase{
         // 读取彩色图
         Mat sourceImage = Imgcodecs.imread(this.p_test_file_path + "/5cent.jpg",Imgcodecs.CV_LOAD_IMAGE_COLOR);
 
-        this.saveImage(this.save_dest_dir + "/image_process_reduce_0.png",sourceImage);
+        this.saveImage(this.save_dir + "/image_process_reduce_0.png",sourceImage);
 
         Mat dstImage = new Mat();
         dstImage.create(sourceImage.rows(),sourceImage.cols(),sourceImage.type());
@@ -36,7 +36,7 @@ public class StudyTest_5 extends OpenCVStudyBase{
 
         System.out.println((end - start) / Core.getTickFrequency());
 
-        this.saveImage(this.save_dest_dir + "/image_process_reduce_1.png",dstImage);
+        this.saveImage(this.save_dir + "/image_process_reduce_1.png",dstImage);
 
         // 已知问题，压缩后，如何还原？？？？？
 
@@ -44,7 +44,7 @@ public class StudyTest_5 extends OpenCVStudyBase{
         dstImage2.create(dstImage.rows(),dstImage.cols(),dstImage.type());
         this.colorReduce_2(dstImage,dstImage2,32);
 
-        this.saveImage(this.save_dest_dir + "/image_process_reduce_2.png",dstImage2);
+        this.saveImage(this.save_dir + "/image_process_reduce_2.png",dstImage2);
 
     }
 

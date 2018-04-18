@@ -16,7 +16,7 @@ import org.opencv.imgproc.Imgproc;
  */
 public class StudyTest_2 extends OpenCVStudyBase{
 
-    private String save_dest_dir = "study-output/study-opencv-2";
+    private String save_dir = "study-output/study-opencv-2";
 
     /*
      * Imgcodecs.imread(String filename, int flags)
@@ -41,7 +41,7 @@ public class StudyTest_2 extends OpenCVStudyBase{
 
         Mat sourceImage = Imgcodecs.imread(this.p_test_file_path + "/5cent.jpg");
         //输出文件
-        this.saveImage(this.save_dest_dir + "/read_image_fn_1.png",sourceImage);
+        this.saveImage(this.save_dir + "/read_image_fn_1.png",sourceImage);
     }
 
     /**
@@ -51,7 +51,7 @@ public class StudyTest_2 extends OpenCVStudyBase{
     @Test
     public void readImage_2(){
         Mat sourceImage = Imgcodecs.imread(p_test_file_path + "/5cent.jpg",Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
-        this.saveImage(this.save_dest_dir + "/read_image_fn_2.png",sourceImage);
+        this.saveImage(this.save_dir + "/read_image_fn_2.png",sourceImage);
 
         //如果不采用此方式进行灰度处理，可以手动进行灰度处理
         //Mat image = Imgcodecs.imread(test_file_path + "/5cent.jpg");
@@ -72,7 +72,7 @@ public class StudyTest_2 extends OpenCVStudyBase{
         // 划线，设置2个点，分别为开始点，结束点，设置线条颜色
         Imgproc.rectangle(sourceImage,new Point(30,30),new Point(500,500) , new Scalar(0,255,0));
 
-        this.saveImage(this.save_dest_dir + "/ROI_draw_area.png",sourceImage);
+        this.saveImage(this.save_dir + "/ROI_draw_area.png",sourceImage);
     }
 
     /**
@@ -88,7 +88,7 @@ public class StudyTest_2 extends OpenCVStudyBase{
          */
         Mat mat_roi = sourceImage.submat(new Rect(30,30,500,500));
 
-        this.saveImage(this.save_dest_dir + "/ROI_cut_area.png",mat_roi);
+        this.saveImage(this.save_dir + "/ROI_cut_area.png",mat_roi);
 
     }
 
@@ -117,7 +117,7 @@ public class StudyTest_2 extends OpenCVStudyBase{
         //第一第四个参数就是各自权重
         Core.addWeighted(mat_roi,0.1, logoImage, 0.9, 0., mat_roi);
 
-        this.saveImage(this.save_dest_dir + "/ROI_add_area_image_1.png",sourceImage);
+        this.saveImage(this.save_dir + "/ROI_add_area_image_1.png",sourceImage);
 
 
     }
@@ -144,7 +144,7 @@ public class StudyTest_2 extends OpenCVStudyBase{
 
         logoImage.copyTo(mat_roi,mask);
 
-        this.saveImage(this.save_dest_dir + "/ROI_add_area_image_2.png",sourceImage);
+        this.saveImage(this.save_dir + "/ROI_add_area_image_2.png",sourceImage);
 
 
     }

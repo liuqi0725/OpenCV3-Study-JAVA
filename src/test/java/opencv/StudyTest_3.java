@@ -15,7 +15,7 @@ import org.opencv.imgproc.Imgproc;
  */
 public class StudyTest_3 extends OpenCVStudyBase{
 
-    private String save_dest_dir = "study-output/study-opencv-3";
+    private String save_dir = "study-output/study-opencv-3";
 
     /**
      * 缩放图片-自定义输出大小
@@ -53,7 +53,7 @@ public class StudyTest_3 extends OpenCVStudyBase{
          */
         Imgproc.resize(sourceImage,outImage,new Size(sourceImage.cols()/3 ,sourceImage.rows()/3) , 0, 0 ,Imgproc.INTER_LINEAR);
 
-        this.saveImage(this.save_dest_dir + "/image_process_resize_1.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_resize_1.png",outImage);
 
     }
 
@@ -70,7 +70,7 @@ public class StudyTest_3 extends OpenCVStudyBase{
 
         Imgproc.resize(sourceImage,outImage,new Size(0,0) , 0.2, 0.4 ,Imgproc.INTER_LINEAR);
 
-        this.saveImage(this.save_dest_dir + "/image_process_resize_2.png",outImage);
+        this.saveImage(this.save_dir + "/image_process_resize_2.png",outImage);
 
 
     }
@@ -142,7 +142,7 @@ public class StudyTest_3 extends OpenCVStudyBase{
         //将图像转化为 RGBA 4通道图像
         Imgproc.cvtColor(blue,cvt_ret,Imgproc.COLOR_BGR2BGRA);
 
-        this.saveImage(this.save_dest_dir + "/image_process_cvtcolor_1.png",cvt_ret);
+        this.saveImage(this.save_dir + "/image_process_cvtcolor_1.png",cvt_ret);
 
     }
 

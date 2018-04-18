@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class StudyTest_6 extends OpenCVStudyBase{
 
-    private String save_dest_dir = "study-output/study-opencv-6";
+    private String save_dir = "study-output/study-opencv-6";
 
 
     /**
@@ -55,7 +55,7 @@ public class StudyTest_6 extends OpenCVStudyBase{
         Mat dst = new Mat();
         Core.addWeighted(image_roi_1,0.5,image_roi_2,0.5,0,dst);
 
-        this.saveImage(this.save_dest_dir + "/image_process_addWeighted.png",dst);
+        this.saveImage(this.save_dir + "/image_process_addWeighted.png",dst);
 
     }
 
@@ -109,7 +109,7 @@ public class StudyTest_6 extends OpenCVStudyBase{
         try {
             OpenCVHandler.addImageInROI(buleChannel,logoImage,0,0);
 
-            this.saveImage(this.save_dest_dir + "/image_process_split_merge_buleChannel.png",buleChannel);
+            this.saveImage(this.save_dir + "/image_process_split_merge_buleChannel.png",buleChannel);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -119,7 +119,7 @@ public class StudyTest_6 extends OpenCVStudyBase{
 
         Core.merge(channels,dst);
 
-        this.saveImage(this.save_dest_dir + "/image_process_split_merge.png",dst);
+        this.saveImage(this.save_dir + "/image_process_split_merge.png",dst);
 
     }
 
@@ -168,7 +168,7 @@ public class StudyTest_6 extends OpenCVStudyBase{
          */
         Core.copyMakeBorder(src,padded, 0,new_height - src.rows(), 0, new_width - src.cols() , Core.BORDER_CONSTANT , Scalar.all(0));
 
-        this.saveImage(this.save_dest_dir + "/image_dft_1.jpg",padded);
+        this.saveImage(this.save_dir + "/image_dft_1.jpg",padded);
 
         List<Mat> paddedMat_channels = new ArrayList<Mat>();
         List<Mat> new_paddedMat_channels = new ArrayList<Mat>();
@@ -200,19 +200,19 @@ public class StudyTest_6 extends OpenCVStudyBase{
         // magnitude 输出的幅值，同 x （实部）有同样的尺寸和类型
         Core.magnitude(new_paddedMat_channels.get(0),new_paddedMat_channels.get(1),new_paddedMat_channels.get(0));
         Mat mag = new_paddedMat_channels.get(0);
-        this.saveImage(this.save_dest_dir + "/image_dft_2.jpg",mag);
+        this.saveImage(this.save_dir + "/image_dft_2.jpg",mag);
 
         Core.add(Mat.ones(mag.size(), CvType.CV_32F), mag , mag);
-        this.saveImage(this.save_dest_dir + "/image_dft_3.jpg",mag);
+        this.saveImage(this.save_dir + "/image_dft_3.jpg",mag);
 
         // 1. 傅里叶变化后，高频值显示为白点，低频值显示为黑点。为了在屏幕上凸显高低变换的连续性，所以要用log函数把数值的范围缩小。
         // 2. 由于幅度的变化范围很大，而一般图像亮度范围只有[0,255]，容易造成一大片漆黑，只有几个点很亮。所以要用log函数把数值的范围缩小。
         Core.log(mag, mag);
-        this.saveImage(this.save_dest_dir + "/image_dft_4.jpg",mag);
+        this.saveImage(this.save_dir + "/image_dft_4.jpg",mag);
 
         // 奇数行 或 奇数列，进行频谱裁剪
         mag = mag.submat(new Rect(0, 0, mag.cols() & -2, mag.rows() & -2));
-        this.saveImage(this.save_dest_dir + "/image_dft_5.jpg",mag);
+        this.saveImage(this.save_dir + "/image_dft_5.jpg",mag);
 
 
         // 高频部分（白点）在中间，低频部分（黑点）在四个角。
@@ -240,7 +240,7 @@ public class StudyTest_6 extends OpenCVStudyBase{
         // 结果保存在一幅单通道图像内：
         Core.normalize(mag, mag, 0, 255, Core.NORM_MINMAX);
 
-        this.saveImage(this.save_dest_dir + "/image_dft_6.jpg",mag);
+        this.saveImage(this.save_dir + "/image_dft_6.jpg",mag);
 
     }
 }

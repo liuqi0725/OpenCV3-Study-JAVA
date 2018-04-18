@@ -18,10 +18,12 @@ public class OpenCVStudyBase {
         OpenCVHandler.loadLibraries();
     }
 
+    private String files_dir = System.getProperty("user.dir") + File.separator + "testFiles";
+
     /**
      * 测试文件路径
      */
-    protected String p_test_file_path = System.getProperty("user.dir") + File.separator + "testFiles/src";
+    protected String p_test_file_path = this.files_dir + File.separator + "src";
 
     /**
      * 保存文件到测试目录
@@ -30,7 +32,7 @@ public class OpenCVStudyBase {
      */
     protected void saveImage(String path,Mat image){
 
-        String outPath = this.p_test_file_path + File.separator + path;
+        String outPath = this.files_dir + File.separator + path;
 
         File file = new File(outPath);
         //目录是否存在

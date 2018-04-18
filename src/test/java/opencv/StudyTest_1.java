@@ -15,7 +15,7 @@ import org.opencv.core.*;
  */
 public class StudyTest_1 extends OpenCVStudyBase{
 
-    private String save_dest_dir = "study-output/study-opencv-1";
+    private String save_dir = "study-output/study-opencv-1";
 
     /*
      * 学习构建 Mat（图像）
@@ -90,7 +90,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
 
         Mat newImage = new Mat(new Size(200,300),CvType.CV_8UC3, new Scalar(255));
 
-        this.saveImage(this.save_dest_dir + "/new_mat_fn_1.png",newImage);
+        this.saveImage(this.save_dir + "/new_mat_fn_1.png",newImage);
 
     }
 
@@ -105,7 +105,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
         //public Mat(Size size, int type, Scalar s)
 
         Mat sourceImage = new Mat(100,100, CvType.CV_8UC4, new Scalar(255,0,0,125));
-        this.saveImage(this.save_dest_dir + "/new_mat_fn_2.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_fn_2.png",sourceImage);
     }
 
     /**
@@ -143,7 +143,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
         //选择一个单通道类型 CV_8UC1
         //单通道下 0 为黑，255为白，取中间值 125 ，灰色。
         Mat sourceImage = new Mat(100,100, CvType.CV_8UC1, new Scalar(125));
-        this.saveImage(this.save_dest_dir + "/new_mat_gay.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_gay.png",sourceImage);
     }
 
     /**
@@ -156,7 +156,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
         //Scalar 入参顺序为 new Scalar(B,G,R,A)。
         //new Scalar(255) 的意思为 B 通道值为255 ，G、R 值不传递的话，默认为0
         Mat sourceImage = new Mat(100,100, CvType.CV_8UC3, new Scalar(255));
-        this.saveImage(this.save_dest_dir + "/new_mat_blue.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_blue.png",sourceImage);
     }
 
     /**
@@ -170,7 +170,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
         //new Scalar(0,255) 的意思为 B 通道值为0，G通道值为255，R 值不传递的话，默认为0
 
         Mat sourceImage = new Mat(100,100, CvType.CV_8UC3, new Scalar(0,255));
-        this.saveImage(this.save_dest_dir + "/new_mat_green.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_green.png",sourceImage);
 
     }
 
@@ -186,7 +186,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
 
         Mat sourceImage = new Mat(100,100, CvType.CV_8UC3, new Scalar(0,0,255));
 
-        this.saveImage(this.save_dest_dir + "/new_mat_red.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_red.png",sourceImage);
 
         new StudyTest_2();
     }
@@ -205,7 +205,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
 
         Mat sourceImage = new Mat(100,100, CvType.CV_8UC4, new Scalar(0,0,255,125));
 
-        this.saveImage(this.save_dest_dir + "/new_mat_alpha_red.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_alpha_red.png",sourceImage);
 
     }
 
@@ -222,7 +222,7 @@ public class StudyTest_1 extends OpenCVStudyBase{
         // 随机给通道填充值， randu(src,low,high)   low=最小值， high=最大值，  0~255
         Core.randu(sourceImage,125,255);
 
-        this.saveImage(this.save_dest_dir + "/new_mat_rand_color.png",sourceImage);
+        this.saveImage(this.save_dir + "/new_mat_rand_color.png",sourceImage);
 
     }
 }

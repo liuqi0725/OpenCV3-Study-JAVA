@@ -16,7 +16,7 @@ import org.opencv.imgproc.Imgproc;
  */
 public class StudyTest_4 extends OpenCVStudyBase{
 
-    private String save_dest_dir = "study-output/study-opencv-4";
+    private String save_dir = "study-output/study-opencv-4";
 
 
     /**
@@ -38,7 +38,7 @@ public class StudyTest_4 extends OpenCVStudyBase{
      *     -- Imgproc.LINE_AA  值 16，抗锯齿线性
      * shift : 圆心坐标点和数轴的精度
      *
-     *
+     * 对角度的理解可以参考 （https://blog.csdn.net/gxiaob/article/details/9396955）
      */
     @Test
     public void drawLine() {
@@ -75,7 +75,7 @@ public class StudyTest_4 extends OpenCVStudyBase{
                 0
         );
 
-        this.saveImage(this.save_dest_dir + "/image_draw_ellipse.png",sourceImage);
+        this.saveImage(this.save_dir + "/image_draw_ellipse.png",sourceImage);
 
     }
 
@@ -106,7 +106,7 @@ public class StudyTest_4 extends OpenCVStudyBase{
                 0
                 );
 
-        this.saveImage(this.save_dest_dir + "/image_draw_filledCircle.png",sourceImage);
+        this.saveImage(this.save_dir + "/image_draw_filledCircle.png",sourceImage);
 
     }
 
@@ -183,7 +183,7 @@ public class StudyTest_4 extends OpenCVStudyBase{
         );
 
 
-        this.saveImage(this.save_dest_dir + "/image_draw_logo.png",canvas);
+        this.saveImage(this.save_dir + "/image_draw_logo.png",canvas);
 
 
     }
