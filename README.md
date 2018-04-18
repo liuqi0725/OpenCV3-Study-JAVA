@@ -19,7 +19,7 @@
 
 
 ## OpenCV 安装
-+ [MacOS 安装 OpenCV JAVA 版](https://my.oschina.net/u/3767256/blog/edit/1614886)
++ [MacOS 安装 OpenCV JAVA 版](https://my.oschina.net/u/3767256/blog/1614886)
 + MacOS 安装 OpenCV Python3 版（暂无）
 + Window 安装 OpenCV JAVA 版（暂无）
 + Window 安装 OpenCV Python3 版（暂无）
