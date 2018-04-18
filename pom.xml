@@ -1,0 +1,72 @@
+<project>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>root</groupId>
+   <version>1.0</version>
+   <artifactId>project</artifactId>
+   <packaging>pom</packaging>
+   <name>project</name>
+
+   <properties>
+      <java.version>1.8</java.version>
+      <log4j2.version>2.1</log4j2.version>
+   </properties>
+
+   <dependencies>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.12</version>
+         <scope>test</scope>
+      </dependency>
+
+      <!--日志包-->
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-core</artifactId>
+         <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-api</artifactId>
+         <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-web</artifactId>
+         <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-slf4j-impl</artifactId>
+         <version>${log4j2.version}</version>
+      </dependency>
+
+
+      <!-- 折腾好久，如果不加 jlc，不会捕获 spring 信息，官网的3.0xml,log4j-web  的说明不行。
+      解决方案地址
+      http://blog.csdn.net/succeedloveaaaa/article/details/52954780
+      -->
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-jcl</artifactId>
+         <version>${log4j2.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.apache.directory.studio</groupId>
+         <artifactId>org.apache.commons.lang</artifactId>
+         <version>2.6</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.opencv</groupId>
+         <artifactId>opencv</artifactId>
+         <version>3.4.0</version>
+         <systemPath>/usr/local/Cellar/opencv/3.4.0_1/share/OpenCV/java/opencv-340.jar</systemPath>
+         <scope>system</scope>
+      </dependency>
+
+
+   </dependencies>
+
+</project>

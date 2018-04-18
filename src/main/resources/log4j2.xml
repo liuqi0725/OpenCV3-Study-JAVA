@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    status : 这个用于设置log4j2自身内部的信息输出,可以不设置,当设置成trace时,会看到log4j2内部各种详细输出
+    monitorInterval : Log4j能够自动检测修改配置文件和重新配置本身, 设置间隔秒数。
+
+-->
+<Configuration status="warn" monitorInterval="600">
+
+    <!-- 定义日志变量 在 xml 配置中用${} 使用变量 -->
+    <Properties>
+        <!--
+            Pattern:设置输出的日志信息格式
+            %d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间
+            %t : 线程名称 链接信息
+            %p : 日志级别
+            %level : 日志级别
+            %c : logger的名称
+            %logger : logger的名称
+            %C : Java类名
+            %F : 文件名
+            %m : 日志内容
+            %n : 换行符
+            %L : 日志输出所在行数
+            %M : 日志输出所在方法名
+        -->
+        <property name="BASE_LOG_PATTERN">%5p %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] (%class{36}:%L）%M - %m%n</property>
+        <!-- 日志目录说明
+            ${sys:catalina.home}  tomcat 目录
+            ${web:rootDir} web 目录
+            /logs 项目目录
+        -->
+        <property name="LOG_DIR_HOME">logs</property>
+        <property name="BASE_LOG_FILENAME">nuna-ocr</property>
+    </Properties>
+
+    <!--
+    appenders 日志输出源，可以在标签内定义多个输出源
+    日志级别 ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+    -->
+    <Appenders>
+
+        <!--这个输出控制台的配置，这里输出除了warn和error级别的信息到System.out-->
+        <!--<Console name="console_out_appender" target="SYSTEM_OUT">-->
+        <!--&lt;!&ndash; 控制台只输出level及以上级别的信息(onMatch),其他的直接拒绝(onMismatch) &ndash;&gt;-->
+        <!--&lt;!&ndash; 配置的意思，不允许 warn 以上级别日志显示(DENY)，只允许 当前及以下日志(ACCEPT) &ndash;&gt;-->
+        <!--<ThresholdFilter level="warn" onMatch="DENY" onMismatch="ACCEPT"/>-->
+        <!--&lt;!&ndash; 输出日志的格式 &ndash;&gt;-->
+        <!--<PatternLayout pattern="${BASE_LOG_PATTERN}"/>-->
+        <!--</Console>-->
+
+        <!--&lt;!&ndash;这个输出控制台的配置，这里输出warn和error级别的信息到System.err，在eclipse控制台上看到的是红色文字&ndash;&gt;-->
+        <!--<Console name="console_err_appender" target="SYSTEM_ERR">-->
+        <!--&lt;!&ndash; 控制台只输出level及以上级别的信息(onMatch),其他的直接拒绝(onMismatch) &ndash;&gt;-->
+        <!--<ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>-->
+        <!--&lt;!&ndash; 输出日志的格式 &ndash;&gt;-->
+        <!--<PatternLayout pattern="${BASE_LOG_PATTERN}"/>-->
+        <!--</Console>-->
+
+        <!--控制台的输出配置-->
+        <!--
+            name：表示控制台Appender的名称，<logger>中会依赖此名称，起名没有具体要求，但最好简明直译
+            target：表示ConsoleAppender使用哪种方式将日志输出到控制台，一般调用System.out.println()方法；
+         -->
+        <!--
+        name：表示文件Appender的名称，<logger>中会依赖此名称，起名没有具体要求，但最好简明直译；
+        fileName：表示生成的日志文件名称；
+        append：表示新生成的日志是否追加到日志文件中，如果为true则表示追加，false表示覆盖原有日志信息；
+        immediateFlush：表示日志打印请求是否立即输出，true为立即，false表示使用缓存；
+        bufferedIO：表示日志打印请求是否使用缓存，true为使用，false为不使用；
+        bufferSize：表示日志打印请求的使用缓存的大小，默认为8096字节；
+        -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" immediateFlush="true"/>
+            <!-- 日志输出的格式 -->
+            <PatternLayout pattern="${BASE_LOG_PATTERN}" />
+        </Console>
+
+        <RollingRandomAccessFile name="stdout_appender"
+                                 immediateFlush="true" fileName="${LOG_DIR_HOME}/${BASE_LOG_FILENAME}-stdout.log"
+                                 filePattern="${LOG_DIR_HOME}/${BASE_LOG_FILENAME}-stdout-%d{yyyy-MM-dd}_%i.log.gz">
+            <PatternLayout>
+                <pattern>${BASE_LOG_PATTERN}</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="5120 KB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="3"/>
+
+        </RollingRandomAccessFile>
+
+        <!-- WARN\ERROR级别日志 -->
+        <RollingRandomAccessFile name="error_appender"
+                                 immediateFlush="true" fileName="${LOG_DIR_HOME}/${BASE_LOG_FILENAME}-error.log"
+                                 filePattern="${LOG_DIR_HOME}/${BASE_LOG_FILENAME}-error-%d{yyyy-MM-dd}_%i.log.gz">
+            <PatternLayout>
+                <pattern>${BASE_LOG_PATTERN}</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="5120 KB"/>
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+
+            <DefaultRolloverStrategy max="3"/>
+
+        </RollingRandomAccessFile>
+
+        <!--<RollingRandomAccessFile name="task_queue_appender"-->
+                                 <!--immediateFlush="true" fileName="${LOG_DIR_HOME}/${BASE_LOG_FILENAME}-queue.log"-->
+                                 <!--filePattern="${LOG_DIR_HOME}/${BASE_LOG_FILENAME}-queue-%d{yyyy-MM-dd}_%i.log.gz">-->
+            <!--<PatternLayout>-->
+                <!--<pattern>${BASE_LOG_PATTERN}</pattern>-->
+            <!--</PatternLayout>-->
+            <!--<Policies>-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="24"/>-->
+                <!--<SizeBasedTriggeringPolicy size="5120 KB"/>-->
+            <!--</Policies>-->
+
+            <!--<DefaultRolloverStrategy max="3"/>-->
+
+        <!--</RollingRandomAccessFile>-->
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- additivity="true" 因为下面还有一个root logger，定义了 logger 全局的日志范围。
+            1. 任何其它的logger最终都相当于继承自root logger，
+                当您定义一个新的 logger，name 属性中的"类或包"，如果输出了在 root logger 范围内的日志。都会被 root logger 捕获
+            2. 如果您 的 logger 中定义了 <appender-ref ref="appender" />，那么您的 logger 满足您条件的日志都会被记录进你的 appender
+            3. 如果设置成 additivity = false 那么 root logger 不会捕获你定义 logger 的日志
+
+        -->
+        <logger name="com.liuqi.app.ocr" level="debug" additivity="false" >
+            <appender-ref ref="Console" />
+            <appender-ref ref="stdout_appender" />
+            <appender-ref ref="error_appender" />
+        </logger>
+
+        <!-- 配置日志的根节点 -->
+        <!--1. includeLocation:Logger默认不会获取location信息，因此，若我们的Layout或Filter等需要location信息，我们必须给相应的设置“includeLocation=true” -->
+        <root level="info" includeLocation="true">
+            <appender-ref ref="Console" />
+            <appender-ref ref="stdout_appender" />
+            <appender-ref ref="error_appender"/>
+        </root>
+
+        <!-- 自定义 logger -->
+        <!-- 类中获取方式  LogManger.getLogger("loggername") -->
+        <!--<Logger name="test1Logger" additivity="TRUE" level="ALL">-->
+        <!--<AppenderRef ref="test1File" level="ALL" />-->
+        <!--<AppenderRef ref="test1RollingFile" level="ALL" />-->
+        <!--</Logger>-->
+        <!--<Logger name="test2Logger" additivity="TRUE" level="ALL">-->
+        <!--<AppenderRef ref="test2RollingFile" level="ALL" />-->
+        <!--</Logger>-->
+
+    </Loggers>
+
+</Configuration>
