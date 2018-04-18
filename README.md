@@ -8,6 +8,7 @@
 ## 开发环境及IDE
 + JDK 1.8
 + OpenCV 3.4
++ MacOS Sierra 10.12.4
 + IDEA 2017
 
 ## 主要参考：
@@ -16,6 +17,9 @@
 + [OpenCV 3.0 Computer Vision with Java](http://pdf.th7.cn/down/files/1602/OpenCV%203.0%20Computer%20Vision%20with%20Java.pdf)
 + [OpenCV3 编程入门](https://www.86mall.com/item/520404025009.html?p=5074&m=ae05433eb15809bfcb7a9a7109f64d9e)
 
+
+## OpenCV 安装
+....
 
 ## 一、OpenCV3 函数学习
 
