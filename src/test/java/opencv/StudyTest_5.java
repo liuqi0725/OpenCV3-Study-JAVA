@@ -8,7 +8,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 /**
  * @Author : alexliu
  * @Description : 主要学习<br/>
- * 1. 图像空间压缩<br/>
+ * 1. 图像空间压缩 <br/>
  */
 public class StudyTest_5 extends OpenCVStudyBase{
 
