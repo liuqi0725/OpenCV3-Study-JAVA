@@ -13,7 +13,8 @@
 
 ## 主要参考：
 
-+ [官方文档](http://opencv-java-tutorials.readthedocs.io/en/latest/)
++ [官方 OpenCV 3.0 开发文档](https://docs.opencv.org/3.0-beta/index.html)
++ [官方 OpenCV 3.0 JAVA 教程](http://opencv-java-tutorials.readthedocs.io/en/latest/)
 + [OpenCV 3.0 Computer Vision with Java](http://pdf.th7.cn/down/files/1602/OpenCV%203.0%20Computer%20Vision%20with%20Java.pdf)
 + [OpenCV3 编程入门](https://www.86mall.com/item/520404025009.html?p=5074&m=ae05433eb15809bfcb7a9a7109f64d9e)
 
