@@ -97,13 +97,15 @@
 ### 8. StudyTest_8
 1. 图像腐蚀
 2. 图像膨胀
-3. 图像边缘检测
+3. 查找条形码案例 ⭐️⭐️⭐️⭐️⭐️
 
 [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/StudyTest_8.java)
 
 
 ### 9. StudyTest_9
 ...待续
+
+### 1x.....
 
 ## 二、案例实践
 
