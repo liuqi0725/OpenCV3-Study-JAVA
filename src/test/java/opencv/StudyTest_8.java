@@ -170,14 +170,14 @@ public class StudyTest_8 extends OpenCVStudyBase{
     /*
      * ------------------------------------------------------------------------------------------------------------
      *
-     * 腐蚀
+     * 膨胀
      *
-     * 1. 腐蚀说明：
+     * 1. 膨胀说明：
      *      图像的一部分区域与指定的核进行卷积，求核的最`大`值并赋值给指定区域。
-     *      腐蚀可以理解为图像中`高亮区域`的'领域扩大'。
+     *      膨胀可以理解为图像中`高亮区域`的'领域扩大'。
      *      意思是高亮部分会侵蚀不是高亮的部分，使高亮部分越来越多。
      *
-     * 2. 腐蚀函数(dilate)
+     * 2. 膨胀函数(dilate)
      *      dilate 有3个原型方法
      *
      *      dilate(Mat src, Mat dst, Mat kernel, Point anchor, int iterations, int borderType, Scalar borderValue)
