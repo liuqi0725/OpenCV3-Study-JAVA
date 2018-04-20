@@ -1,4 +1,4 @@
-package opencv;
+package opencv.study;
 
 import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import org.opencv.imgproc.Imgproc;
  * 1. 3种线性滤波 <br/>
  * 2. 2种非线性滤波<br/>
  */
-public class ProcessTest_7 extends OpenCVProcessBase {
+public class StudySection_7 extends OpenCVProcessBase {
 
     /*
      * 一、图像滤波介绍
