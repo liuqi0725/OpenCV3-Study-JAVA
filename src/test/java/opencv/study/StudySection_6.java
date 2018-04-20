@@ -1,4 +1,4 @@
-package opencv;
+package opencv.study;
 
 import com.liuqi.opencv.OpenCVHandler;
 import com.liuqi.opencv.base.OpenCVProcessBase;
@@ -16,7 +16,7 @@ import java.util.List;
  * 2. 图像通道的拆分、合并<br/>
  * 3. 离散傅里叶变换 DFT<br/>
  */
-public class ProcessTest_6 extends OpenCVProcessBase {
+public class StudySection_6 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-6";
 
