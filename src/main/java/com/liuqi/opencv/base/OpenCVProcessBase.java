@@ -1,6 +1,6 @@
-package opencv.base;
+package com.liuqi.opencv.base;
 
-import com.liuqi.core.opencv.OpenCVHandler;
+import com.liuqi.opencv.OpenCVHandler;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 
@@ -11,7 +11,7 @@ import java.io.File;
  * @Description : something do..
  * @Date : Create at 下午2:16 2018/4/11
  */
-public class OpenCVStudyBase {
+public class OpenCVProcessBase {
 
     static {
         //加载OpenCV 动态链接库
@@ -29,8 +29,9 @@ public class OpenCVStudyBase {
      * 保存文件到测试目录
      * @param path
      * @param image
+     * @return File
      */
-    protected void saveImage(String path,Mat image){
+    protected File saveImage(String path,Mat image){
 
         String outPath = this.files_dir + File.separator + path;
 
@@ -40,6 +41,8 @@ public class OpenCVStudyBase {
 
         //opencv的写出文件
         Imgcodecs.imwrite(outPath,image);
+
+        return file;
 
     }
 
