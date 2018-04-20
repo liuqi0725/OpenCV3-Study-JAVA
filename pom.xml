@@ -9,6 +9,7 @@
    <properties>
       <java.version>1.8</java.version>
       <log4j2.version>2.1</log4j2.version>
+      <zxing.version>3.3.0</zxing.version>
    </properties>
 
    <dependencies>
@@ -64,6 +65,18 @@
          <version>3.4.0</version>
          <systemPath>/usr/local/Cellar/opencv/3.4.0_1/share/OpenCV/java/opencv-340.jar</systemPath>
          <scope>system</scope>
+      </dependency>
+
+      <!-- 二维码处理 -->
+      <dependency>
+         <groupId>com.google.zxing</groupId>
+         <artifactId>core</artifactId>
+         <version>${zxing.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>com.google.zxing</groupId>
+         <artifactId>javase</artifactId>
+         <version>${zxing.version}</version>
       </dependency>
 
 
