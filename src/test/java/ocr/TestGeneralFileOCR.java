@@ -1,4 +1,6 @@
-import com.liuqi.app.ocr.core.OcrProcess;
+package ocr;
+
+import com.liuqi.ocr.core.OcrProcess;
 import org.apache.logging.log4j.core.config.ConfigurationSource;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Before;
