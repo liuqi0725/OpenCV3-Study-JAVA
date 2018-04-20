@@ -1,4 +1,4 @@
-package opencv;
+package opencv.study;
 
 import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
@@ -13,7 +13,7 @@ import org.opencv.core.*;
  * 4. 创建透明图像<br/>
  * 5. 期望值来创建随机的初始化矩阵图像<br/>
  */
-public class ProcessTest_1 extends OpenCVProcessBase {
+public class StudySection_1 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-1";
 
@@ -188,7 +188,7 @@ public class ProcessTest_1 extends OpenCVProcessBase {
 
         this.saveImage(this.save_dir + "/new_mat_red.png",sourceImage);
 
-        new ProcessTest_2();
+        new StudySection_2();
     }
 
 
