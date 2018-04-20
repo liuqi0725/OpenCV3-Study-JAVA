@@ -5,7 +5,6 @@
 
 <br/>
 
-**以下内容会不定期更新，更新周期最多不会超过3天。直至更新完毕。**
 
 
 ## 开发环境及IDE
@@ -28,96 +27,34 @@
 + Window 安装 OpenCV JAVA 版（暂无）
 + Window 安装 OpenCV Python3 版（暂无）
 
-## 一、OpenCV3 函数学习
+## 一、章节目录
 
 **所有示例均放在 `src/test/java/opencv/study` 目录下**.
 
-### 1. StudyTest_1
-
-1. 创建 Mat 对象，Mat 对象的参数介绍
-2. 通过Matlab 创建 Mat 对象
-3. 创建彩色图像
-4. 创建透明图像
-5. 期望值来创建随机的初始化矩阵图像
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_1.java)
-
-### 2. StudyTest_2
-
-1. 图像的读取
-2. 对 ROI 区域描边
-3. 截取 ROI 区域
-4. 用图片在原始图片上划定 ROI 区域，并替换
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_2.java)
-### 3. StudyTest_3
-
-1. resize 图像缩放<br/>
-2. rect 矩形对象<br/>
-3. cvtColor 颜色空间转化转换<br/>
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_3.java)
-
-### 4. StudyTest_4
-
-1. 画椭圆
-2. 画实心圆
-3. 画线
-4. 画矩形
-5. 结合例子
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_4.java)
-
-
-### 5. StudyTest_5
-1. 图像空间压缩（如何还原还没处理）
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_5.java)
-
-
-### 6. StudyTest_6
-
-1. 图像线性混合addWeighted
-2. 图像通道的拆分、合并
-3. 离散傅里叶变换 DFT
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_6.java)
-
-
-### 7. StudyTest_7
-1. 3种线性滤波
-    + BoxBlur -- 方框滤波   
-    + Blur -- 均值滤波
-    + GaussianBlur -- 高斯滤波
-2. 2种非线性滤波
-    + medianBlur -- 中值滤波
-    + BilateralFilter -- 双边滤波
+1. [StudySection_1 ----------- 认识 Mat 对象，创建图像矩阵](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_1.java)
+2. [StudySection_2 ----------- 图像的读取、图像 ROI 区域的使用](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_2.java)
+3. [StudySection_3 ----------- 图像缩放、颜色空间转化。](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_3.java)
+4. [StudySection_4 ----------- 绘图像(直线、矩形、圆形、椭圆等)](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_4.java)
+5. [StudySection_5 ----------- 图像空间压缩](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_5.java)
+6. [StudySection_6 ----------- 图像线性混合、通道拆分合并、离散傅里叶变换](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_6.java)
+7. [StudySection_7 ----------- 图像滤波](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_7.java)
     
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_7.java)
-
-### 8. StudyTest_8
-1. 图像腐蚀
-2. 图像膨胀
-3. 查找条形码案例 ⭐️⭐️⭐️⭐️⭐️
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_8.java)
-
-
-### 9. StudyTest_9
-1. 开运算
-2. 闭运算
-3. 形态学梯度
-4. 顶帽
-5. 黑帽
-6. 识别图中二维码 ⭐️⭐️⭐️⭐️⭐️
-
-> 对本章节内容学习深入不够，图像的专业知识较多，后续随着业务的深入再回头来深入理解
-
-➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_9.java)
+    + 3种线性滤波
+        + BoxBlur -- 方框滤波   
+        + Blur -- 均值滤波
+        + GaussianBlur -- 高斯滤波
+    + 2种非线性滤波
+        + medianBlur -- 中值滤波
+        + BilateralFilter -- 双边滤波
+8. [StudySection_8 ----------- 图像腐蚀(erode)、膨胀(dilate)、查找条形码案例。](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_8.java)
+9. [StudySection_9 ----------- 形态学滤波(开、闭运算、顶帽等)、识别图中二维码案例](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_9.java)
+    
+    + 对本章节内容学习深入不够，图像的专业知识0-较多，后续随着业务的深入再回头来深入理解
 
 
-### 1x.....
-持续更新中...
+**以上内容会不定期更新，更新周期最多不会超过3天。直至更新完毕。**
+
+
 
 ## 二、案例实践
 
