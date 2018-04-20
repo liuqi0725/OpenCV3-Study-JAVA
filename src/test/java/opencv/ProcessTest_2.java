@@ -1,6 +1,6 @@
 package opencv;
 
-import opencv.base.OpenCVStudyBase;
+import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -14,7 +14,7 @@ import org.opencv.imgproc.Imgproc;
  * 3. 截取 ROI 区域<br/>
  * 4. 用图片在原始图片上划定 ROI 区域，并替换<br/>
  */
-public class StudyTest_2 extends OpenCVStudyBase{
+public class ProcessTest_2 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-2";
 
