@@ -1,4 +1,4 @@
-package opencv;
+package opencv.study;
 
 import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.opencv.imgcodecs.Imgcodecs;
  * @Description : 主要学习<br/>
  * 1. 图像空间压缩 <br/>
  */
-public class ProcessTest_5 extends OpenCVProcessBase {
+public class StudySection_5 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-5";
 
