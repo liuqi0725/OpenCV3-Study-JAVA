@@ -1,4 +1,4 @@
-package com.liuqi.app.ocr.common;
+package com.liuqi.ocr.common;
 
 public class OcrConstants {
 

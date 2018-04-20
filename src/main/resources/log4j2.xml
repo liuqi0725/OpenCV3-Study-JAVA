@@ -137,7 +137,7 @@
             3. 如果设置成 additivity = false 那么 root logger 不会捕获你定义 logger 的日志
 
         -->
-        <logger name="com.liuqi.app.ocr" level="debug" additivity="false" >
+        <logger name="com.liuqi.ocr" level="debug" additivity="false" >
             <appender-ref ref="Console" />
             <appender-ref ref="stdout_appender" />
             <appender-ref ref="error_appender" />

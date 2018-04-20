@@ -1,4 +1,4 @@
-package com.liuqi.app.ocr.core;//package com.shenshu.deepCapture.ocr.core;
+package com.liuqi.ocr.core;//package com.shenshu.deepCapture.ocr.core;
 //
 //import com.shenshu.deepCapture.dam.core.sys.SystemParam;
 //import com.shenshu.deepCapture.ocr.common.OcrConstants;

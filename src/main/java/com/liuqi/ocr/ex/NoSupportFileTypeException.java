@@ -1,4 +1,4 @@
-package com.liuqi.app.ocr.ex;
+package com.liuqi.ocr.ex;
 
 /**
  * @Author : alexliu

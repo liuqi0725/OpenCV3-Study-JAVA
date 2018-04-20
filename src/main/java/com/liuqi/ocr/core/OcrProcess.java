@@ -1,8 +1,8 @@
-package com.liuqi.app.ocr.core;
+package com.liuqi.ocr.core;
 
-import com.liuqi.app.ocr.common.OcrConstants;
-import com.liuqi.app.ocr.common.OcrTools;
-import com.liuqi.app.ocr.ex.NoSupportFileTypeException;
+import com.liuqi.ocr.common.OcrConstants;
+import com.liuqi.ocr.common.OcrTools;
+import com.liuqi.ocr.ex.NoSupportFileTypeException;
 import org.apache.commons.lang.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
