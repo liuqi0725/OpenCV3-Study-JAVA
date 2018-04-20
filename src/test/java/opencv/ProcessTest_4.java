@@ -1,6 +1,6 @@
 package opencv;
 
-import opencv.base.OpenCVStudyBase;
+import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
@@ -14,7 +14,7 @@ import org.opencv.imgproc.Imgproc;
  * 4. 画矩形 <br/>
  * 5. 结合例子 <br/>
  */
-public class StudyTest_4 extends OpenCVStudyBase{
+public class ProcessTest_4 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-4";
 
