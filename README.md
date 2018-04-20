@@ -104,9 +104,20 @@
 
 
 ### 9. StudyTest_9
-...持续更新中
+1. 开运算
+2. 闭运算
+3. 形态学梯度
+4. 顶帽
+5. 黑帽
+6. 识别图中二维码 ⭐️⭐️⭐️⭐️⭐️
+
+> 对本章节内容学习深入不够，图像的专业知识较多，后续随着业务的深入再回头来深入理解
+
+➡️ [代码链接](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_9.java)
+
 
 ### 1x.....
+持续更新中...
 
 ## 二、案例实践
 
