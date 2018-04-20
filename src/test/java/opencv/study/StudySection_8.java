@@ -1,4 +1,4 @@
-package opencv;
+package opencv.study;
 
 import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import java.util.List;
  * 2. 图像膨胀<br/>
  * 3. 查找条形码案例<br/>
  */
-public class ProcessTest_8 extends OpenCVProcessBase {
+public class StudySection_8 extends OpenCVProcessBase {
 
     /*
      * 腐蚀，膨胀都属于形态学滤波。
