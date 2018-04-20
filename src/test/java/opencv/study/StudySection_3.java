@@ -1,4 +1,4 @@
-package opencv;
+package opencv.study;
 
 import com.liuqi.opencv.base.OpenCVProcessBase;
 import org.junit.Test;
@@ -13,7 +13,7 @@ import org.opencv.imgproc.Imgproc;
  * 2. rect 矩形对象<br/>
  * 3. cvtColor 颜色空间转化转换<br/>
  */
-public class ProcessTest_3 extends OpenCVProcessBase {
+public class StudySection_3 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-3";
 
