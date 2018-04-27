@@ -9,72 +9,12 @@ import org.opencv.imgproc.Imgproc;
 /**
  * @Author : alexliu
  * @Description : 主要学习<br/>
- * 1. resize 图像缩放 <br/>
- * 2. rect 矩形对象<br/>
- * 3. cvtColor 颜色空间转化转换<br/>
+ * 1. rect 矩形对象<br/>
+ * 2. cvtColor 颜色空间转化转换<br/>
  */
 public class StudySection_3 extends OpenCVProcessBase {
 
     private String save_dir = "study-output/study-opencv-3";
-
-    /**
-     * 缩放图片-自定义输出大小
-     */
-    @Test
-    public void testResize_1(){
-
-        // 读取彩色图
-        Mat sourceImage = Imgcodecs.imread(this.p_test_file_path + "/5cent.jpg",Imgcodecs.CV_LOAD_IMAGE_COLOR);
-
-        Mat outImage = new Mat();
-
-        /*
-         * 1. resize 是一个具有多态特性，提供2种不同入参的方式
-         *
-         *      * 直接缩放到对应 Size 大小
-         *      public static void resize(Mat src, Mat dst, Size dsize)
-         *
-         *      * 可根据 Size 缩放，也可以根据 fx、fy 按比例缩放
-         *      public static void resize(Mat src, Mat dst, Size dsize, double fx, double fy, int interpolation)
-         *
-         * 2. 参数说明
-         *
-         *      * src: 输入，原图像，即待改变大小的图像
-         *      * dst: 输出，改变大小之后的图像
-         *      * dsize: 输出图像的大小 Size(width,height) ，通过 new Size(0,0) 可以设置其值为0，当 dsize 为0时，按照 fx、fy 缩放图片
-         *          -- 当 dsize 为 0 时，通过计算 fx、fy 来对图片进行缩放，缩放的公式为：new Size(round(fx*src.cols), round(fy*src.rows))
-         *      * fx: 宽度的缩放比例，当 dsize 为 0 时才生效。
-         *      * fy: 高度的缩放比例，当 dsize 为 0 时才生效。
-         *      * interpolation:
-         *
-         * 3. 注意：
-         *      * dsize 与 fx，fy 分别为2种缩放模式，必须启用一种。要么自定义大小（dszie），要么按照比例（fx,fy）; 也就是说，dsize、fx、fy 3者不能同时都为 0。
-         *
-         */
-        Imgproc.resize(sourceImage,outImage,new Size(sourceImage.cols()/3 ,sourceImage.rows()/3) , 0, 0 ,Imgproc.INTER_LINEAR);
-
-        this.saveImage(this.save_dir + "/image_process_resize_1.png",outImage);
-
-    }
-
-    /**
-     * 缩放图片-根据比例缩放
-     */
-    @Test
-    public void testResize_2(){
-
-        // 读取彩色图
-        Mat sourceImage = Imgcodecs.imread(this.p_test_file_path + "/5cent.jpg",Imgcodecs.CV_LOAD_IMAGE_COLOR);
-
-        Mat outImage = new Mat();
-
-        Imgproc.resize(sourceImage,outImage,new Size(0,0) , 0.2, 0.4 ,Imgproc.INTER_LINEAR);
-
-        this.saveImage(this.save_dir + "/image_process_resize_2.png",outImage);
-
-
-    }
-
 
     /**
      * 主要学习矩形类型 Rect 的操作
@@ -113,7 +53,6 @@ public class StudySection_3 extends OpenCVProcessBase {
         //平移，缩放 ？？？？
 
     }
-
 
     /**
      * cvtColor 是颜色空间转化函数，可以实现 RGB 向 HSV、HSI 、灰度等颜色空间转化
