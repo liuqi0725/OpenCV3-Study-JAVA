@@ -1,9 +1,12 @@
 package com.liuqi.opencv;
 
-import org.opencv.core.Core;
-import org.opencv.core.Mat;
-import org.opencv.core.Rect;
+import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
+import org.opencv.imgproc.Moments;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 /**
  * @Author : alexliu
@@ -199,6 +202,41 @@ public class OpenCVHandler {
 
         return dst;
 
+    }
+
+    /**
+     * 通过 findContours 函数返回的轮廓，查找轮廓中心点
+     * @param contours 轮廓集合
+     * @return Vector<Point> 中心点集合 float mat 矩阵数据
+     */
+    public static Vector<Point> findContourCenter(List<MatOfPoint> contours){
+        Vector<Point> centerPointList = new Vector<Point>();
+        for(int i=0; i<contours.size(); i++){
+            //Point[] pArr = {findContourCenter(contours.get(i))};
+            centerPointList.add(i,findContourCenter(contours.get(i)));
+        }
+
+        return centerPointList;
+
+    }
+
+    /**
+     * 通过 findContours 函数返回的轮廓，查找轮廓中心点
+     * @param contour
+     * @return 中心点
+     */
+    public static Point findContourCenter(MatOfPoint contour){
+
+        //转成2f
+        MatOfPoint2f map = new MatOfPoint2f(contour.toArray());
+
+        Moments moments = Imgproc.moments(map);
+        Point center = new Point();
+        //官方获取轮廓中心点方法
+        center.x = (int) (moments.m10 / moments.m00);
+        center.y = (int) (moments.m01 / moments.m00);
+
+        return center;
     }
 
 
