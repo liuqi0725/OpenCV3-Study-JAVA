@@ -47,7 +47,7 @@
     * 对 ROI 区域描边
     * 截取 ROI 区域
     * 用图片在原始图片上划定 ROI 区域，并替换
-3. [StudySection_3 ----------- 图像缩放、颜色空间转化。](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_3.java)
+3. [StudySection_3 ----------- 矩形、颜色空间转化](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_3.java)
 4. [StudySection_4 ----------- 绘图像(直线、矩形、圆形、椭圆等)](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_4.java)
 
     * 画椭圆
@@ -70,7 +70,9 @@
 9. [StudySection_9 ----------- 形态学滤波(开、闭运算、顶帽等)、识别图中二维码案例](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_9.java)
     
     + 对本章节内容学习深入不够，图像的专业知识0-较多，后续随着业务的深入再回头来深入理解
-
+10. [StudySection_10 ----------- floodFill(漫水填充)、图片的放大缩小 pyrUp、pyrDown、Resize](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_10.java)
+      
+      
 
 +--------------------------------------------------------------------------+<br/>
          **以上内容会不定期更新，更新周期最多不会超过3天。直至更新完毕。**            <br/>
@@ -85,9 +87,7 @@
 
 ### 2. 表格数据结构化
 
-### 3. 图像中二维码识别
-
-### 4. 其他
+### 3. 其他
 
 > 第二部分之前已经实现了一点，但是效果并不好，原理是不晓得 OpenCV 函数的定义。
 还是静下心来先从基础开始把OpenCV 基础的内容学习了，再来做整合，后续会更新代码。
