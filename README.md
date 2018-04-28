@@ -71,9 +71,9 @@
     
     + 对本章节内容学习深入不够，图像的专业知识0-较多，后续随着业务的深入再回头来深入理解
 10. [StudySection_10 ----------- floodFill(漫水填充)、图片的放大缩小 pyrUp、pyrDown、Resize](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_10.java)
+11. [StudySection_11 ----------- threshold 固定阈值操作、adaptiveThreshold 自适应阈值操作](https://github.com/liuqi0725/OpenCV3-Study-JAVA/blob/master/src/test/java/opencv/study/StudySection_11.java)
+       
       
-      
-
 +--------------------------------------------------------------------------+<br/>
          **以上内容会不定期更新，更新周期最多不会超过3天。直至更新完毕。**            <br/>
 +--------------------------------------------------------------------------+<br/>
