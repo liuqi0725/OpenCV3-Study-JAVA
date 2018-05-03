@@ -48,7 +48,7 @@ public class StudySection_11 extends OpenCVProcessBase {
          *              -- 【4】THRESH_TOZERO_INV : src(x,y) > thresh ? 0 : src(x,y) 。 当前像素点灰度值 > thresh , 当前像素点值为0 ，其他情况保持不变
          */
 
-        Mat src = Imgcodecs.imread(this.p_test_file_path + "/caoyuan.jpg",Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
+        Mat src = Imgcodecs.imread(this.p_test_file_path + "/mao.jpg",Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
         this.saveImage(this.save_dir + "/image_thresh_0.png",src);
 
         Mat dst = new Mat();
@@ -136,5 +136,4 @@ public class StudySection_11 extends OpenCVProcessBase {
         this.saveImage(this.save_dir + "/image_process_adaptiveThreshold_4.png",dst);
 
     }
-
 }
