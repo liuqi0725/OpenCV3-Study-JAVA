@@ -8,7 +8,7 @@
 
    <properties>
       <java.version>1.8</java.version>
-      <log4j2.version>2.1</log4j2.version>
+      <log4j2.version>2.16.0</log4j2.version>
       <zxing.version>3.3.0</zxing.version>
    </properties>
 
